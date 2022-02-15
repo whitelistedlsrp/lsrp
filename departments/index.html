@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../images/lsrp.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">LSRP</span>
+                    <span class="profession">WL-ON Server</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <!--
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+            -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="../index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home page</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../appcentre/index.html">
+                            <i class='bx bx-spreadsheet icon' ></i>
+                            <span class="text nav-text">App Centre</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-hive icon'></i>
+                            <span class="text nav-text">Departments</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="../faq/index.html">
+                            <i class='bx bx-data icon' ></i>
+                            <span class="text nav-text">FAQ</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="home">
+        <div class="text">Department Sub-servers</div>
+        <!--<div class="header">
+            <h1>Where do you want to apply?</h1>
+        </div>-->
+        <div class="container">
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h1>River City PD</h1>
+                        <p>Join here and request <strong>Cadet</strong> role!</p>
+                        <a href="https://discord.gg/EvSpX8u2vE" type="button" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h1>Liberty County SO</h1>
+                        <p>Join here and request <strong>Probationary Deputy</strong> role!</p>
+                        <a href="https://discord.gg/EMv78T56Wf" type="button" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h1>Liberty State Police</h1>
+                        <p>Join here and apply!</p>
+                        <a href="https://discord.gg/HHdxxP9SJf" type="button" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="content">
+                        <h1>River City FR</h1>
+                        <p>Join here and request <strong>EMS or Firefighter</strong> role!</p>
+                        <a href="https://discord.gg/khR5bAx4jd" type="button" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 1050px">
+                <div class="box">
+                    <div class="content">
+                        <h1>DOT</h1>
+                        <p>Join here and request <strong>DOT</strong> role!</p>
+                        <a href="https://discord.gg/GNur4nPQQa" type="button" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>
